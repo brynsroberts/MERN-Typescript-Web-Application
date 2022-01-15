@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Container } from "react-bootstrap";
-
 import UsersList from "../components/UsersList";
 
 const Users: React.FC = () => {
@@ -14,11 +12,7 @@ const Users: React.FC = () => {
       places: 1,
     },
   ]!;
-  return (
-    <Container>
-      <UsersList items={USERS} />
-    </Container>
-  );
+  return <UsersList items={USERS} />;
 };
 
 export default Users;
