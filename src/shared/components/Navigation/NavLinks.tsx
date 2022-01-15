@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import "./NavLinks.css";
 
-const NavLinks = () => {
+const NavLinks: React.FC = () => {
   return (
     <ul className="nav-links">
       <li>
