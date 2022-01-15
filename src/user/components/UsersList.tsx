@@ -4,7 +4,7 @@ import UserItem from "./UserItem";
 import "./UsersList.css";
 
 interface UsersListProps {
-  items: { id: string; image: string; name: string; places: number }[];
+  items: { id: string; image: string; name: string; places: number }[] | [];
 }
 
 const UsersList: React.FC<UsersListProps> = (props) => {
@@ -17,7 +17,7 @@ const UsersList: React.FC<UsersListProps> = (props) => {
   }
 
   return (
-    <ul>
+    <ul className="users-list">
       {props.items.map((user) => {
         return (
           <UserItem
