@@ -22,13 +22,11 @@ const MainNavigation: React.FC = () => {
   return (
     <React.Fragment>
       {drawerIsOpen && <Backdrop onClick={closeDrawer} />}
-      {drawerIsOpen && (
-        <SideDrawer>
-          <nav className="main-navigation__drawer-nav">
-            <NavLinks />
-          </nav>
-        </SideDrawer>
-      )}
+      <SideDrawer show={drawerIsOpen}>
+        <nav className="main-navigation__drawer-nav">
+          <NavLinks />
+        </nav>
+      </SideDrawer>
       <MainHeader>
         <button className="main-navigation__menu-btn" onClick={openDrawer}>
           <span />
@@ -38,7 +36,7 @@ const MainNavigation: React.FC = () => {
         <h1 className="main-navigation__title">
           <Link to="/">App Name</Link>
         </h1>
-        <nav>
+        <nav className="main-navigation__header-nav">
           <NavLinks />
         </nav>
       </MainHeader>
