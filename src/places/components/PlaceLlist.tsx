@@ -1,6 +1,7 @@
 import React from "react";
-import PlaceItem from "./PlaceItem";
 
+import PlaceItem from "./PlaceItem";
+import Card from "../../shared/components/UIElements/Card";
 import "./PlaceList.css";
 
 interface PlaceListProps {
@@ -19,8 +20,10 @@ const PlaceList: React.FC<PlaceListProps> = (props) => {
   if (props.items.length === 0) {
     return (
       <div className="place-list center">
-        <h2>No Places Found. Maybe create one?</h2>
-        <button>Share Place</button>
+        <Card>
+          <h2>No Places Found. Maybe create one?</h2>
+          <button>Share Place</button>
+        </Card>
       </div>
     );
   }
