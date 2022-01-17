@@ -13,8 +13,6 @@
   padding: 1rem;
   color: white;
   background: #292929;
-  border-radius: 6%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
 .user-item a:hover,

@@ -1,7 +1,7 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 
+import Card from "../../shared/components/UIElements/Card";
 import Avatar from "../../shared/components/UIElements/Avatar";
 import "./UserItem.css";
 
@@ -15,7 +15,7 @@ interface UserItemProps {
 const UserItem: React.FC<UserItemProps> = (props) => {
   return (
     <li className="user-item">
-      <div className="user-item__content">
+      <Card className="user-item__content">
         <Link to={`/${props.id}/places`}>
           <div>
             <Avatar image={props.image} alt={props.name} />
@@ -27,7 +27,7 @@ const UserItem: React.FC<UserItemProps> = (props) => {
             </h3>
           </div>
         </Link>
-      </div>
+      </Card>
     </li>
   );
 };
