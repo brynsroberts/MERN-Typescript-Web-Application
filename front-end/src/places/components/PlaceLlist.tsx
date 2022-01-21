@@ -12,7 +12,7 @@ interface PlaceListProps {
     description: string;
     address: string;
     creator: string;
-    location: { lat: number; long: number };
+    location: { lat: number; lng: number };
   }[];
 }
 
